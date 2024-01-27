@@ -4,4 +4,83 @@ import "fmt"
 
 func main() {
 	fmt.Println("Hello world!")
+
+	variables()
+	constants()
+	loops()
+	ifElse()
+}
+
+func variables() {
+	fmt.Println("Variables:")
+
+	var a = "this a string"
+	var b, c int = 1, 2
+	d := false
+
+	fmt.Println(a, b, c)
+	fmt.Println(d)
+}
+
+const a = 20
+
+func constants() {
+	fmt.Println("Constants:")
+
+	const b = 500 / a
+
+	fmt.Println(a)
+	fmt.Println(b)
+}
+
+func loops() {
+	fmt.Println("Loops:")
+
+	var i = 0
+	for i < 3 {
+		fmt.Println(i)
+		i += 1
+	}
+
+	for j := 3; j < 8; j++ {
+		fmt.Println(j)
+	}
+
+	for {
+		fmt.Println("infinite")
+		break
+	}
+
+	for n := 0; n < 10; n++ {
+		if n%2 == 0 {
+			continue
+		}
+
+		fmt.Println(n)
+	}
+}
+
+func ifElse() {
+
+	if 6%2 == 0 {
+		fmt.Println("6 is even")
+	} else {
+		fmt.Println("6 is odd")
+	}
+
+	if 8%4 == 0 {
+		fmt.Println("8 is divisible by 4")
+	}
+
+	if 8%2 == 0 || 7%2 == 0 {
+		fmt.Println("either 8 or 7 is even")
+	}
+
+	if num := 9; num < 0 {
+		fmt.Println(num, "is negative")
+	} else if num < 10 {
+		fmt.Println(num, "has 1 digit")
+	} else {
+		fmt.Println(num, "has multiple digits")
+	}
 }
